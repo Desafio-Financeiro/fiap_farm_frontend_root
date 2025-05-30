@@ -8,9 +8,12 @@ export default createModuleFederationConfig({
     analytics: `analytics@${process.env.ANALYTICS_APP_URL}`,
   },
   shareStrategy: "loaded-first",
+
   shared: {
     react: { singleton: true },
     "react-dom": { singleton: true },
     "react-router-dom": { singleton: true },
   },
+  dts: false,
+  manifest: false,
 });
